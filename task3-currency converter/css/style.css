@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    -webkit-user-drag: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(100% 135% at 90% 0%, #00FF66 0%, #00FF66 33%, #00FFFF calc(33% + 1px), #00FFFF 75%, #EB00FF calc(75% + 1px), #EB00FF 100%), radial-gradient(circle at 60% 110%, #00FF66 0%, #00FF66 33%, #00FFFF calc(33% + 1px), #00FFFF 66%, #EB00FF calc(66% + 1px), #EB00FF 100%), radial-gradient(100% 225% at 0% 0%, #00FF66 0%, #00FF66 33%, #00FFFF calc(33% + 1px), #00FFFF 66%, #EB00FF calc(66% + 1px), #EB00FF 100%);
+    background-blend-mode: multiply, multiply,  normal;
+    filter: saturate(120%) ;
+}
+
+.wrapper{
+    background: #000066a9;
+    border-radius: 10px;
+    width: 400px;
+    padding: 30px;
+    border: 3px solid #11d358;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.377);
+    color: white;
+}
+
+.wrapper header {
+    font-size: 28px;
+    text-align: center;
+}
+
+.wrapper form {
+    margin: 40px 0 20px 0;
+}
+
+form input, select {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+form .input_style {
+    border: 2px solid #11d358;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    caret-color: #11d358;
+    transition: .2s all ease;
+}
+
+.exchange_btn {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    background: #11d358;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    box-shadow: 0 2px 4px -2px black;
+    transition: .2s ease-out;
+}
+
+.exchange_btn:hover {
+    background: #12a347;
+    transform: scale(1.02);
+    box-shadow: 0 2px 4px -1px black;
+}
+
+.exchange_btn:active {
+    transform: scale(.90);
+}
+
+form p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input:focus{
+    border: 3px solid #11d358;
+    box-shadow: 0 2px 4px -1px black;
+}
+
+form input:hover{
+    box-shadow: 0 2px 4px -2px black;
+}
+
+form .drop_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drop_list .select_box{
+    display: flex;
+    border: 2px solid #11d358;
+    border-radius: 5px;
+    height: 45px;
+    width: 115px;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease;
+    cursor: pointer;
+}
+
+.drop_list .select_box:hover{
+    box-shadow: 0 2px 4px -2px black;
+}
+
+.select_box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+
+.select_box img{
+    max-width: 25px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.drop_list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #11d358;
+}
+
+form .exchange_rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+
+.exchange_result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: keep-all;
+    margin-top: 30px;
+}
+
+select {
+    background: transparent;
+    user-select: none;
+    color: #11d358;
+    text-shadow: 1px 0px 3px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Utilities */
+
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.money_loading{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.loading p {
+    margin-top: 20px;
+    color: #11d358;
+}
+
+.error_text {
+    color: red;
+    font-size: 13px;
+    text-shadow: 0 1px 4px black;
+    user-select: none;
+}
+
+.error_text2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.error_text2 img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 5px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.error_text2 p{
+    color: red;
+    font-size: 15px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+::selection {
+    background: #11d358;
+}
+
+.select_box select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_box select::-webkit-scrollbar-track {
+    background: white;
+}
+
+.select_box select::-webkit-scrollbar-thumb {
+    background: #11d358;
+    border-radius: 8px;
+    border-right: 2px solid white;
+}
+.select_box select::-webkit-scrollbar-thumb:hover {
+    background: #17813e;
+}
+
+.github_corner{
+    position: absolute;
+    font-size: 22px;
+    top: 10px;
+    right: 20px;
+}
+
+.github_corner a {
+    color: #11d358;
+    transition: .2s;
+}
+
+.github_corner:hover a{
+    color: #199145;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 650px) {
+    body {
+        background: radial-gradient(65% 100% at 50% 0%, #00FF94 0%, rgba(0, 255, 148, 0.25) 100%), linear-gradient(230deg, #000000 25%, #170059 100%), linear-gradient(215deg, #FFEBB9 10%, #19004E 80%), radial-gradient(100% 245% at 100% 100%, #FFFFFF 0%, #000353 100%), linear-gradient(125deg, #1400FF 0%, #3A0000 100%), linear-gradient(225deg, #00F0FF 30%, #000B6F 45%, #00EBFC 45%, #001676 65%, #00E1F6 65%, #001676 85%, #00ECFD 85%, #001676 100%), linear-gradient(135deg, #00F0FF 0%, #000B6F 15%, #00EBFC 15%, #001676 35%, #00E1F6 35%, #001676 55%, #00ECFD 55%, #001676 100%);
+        background-blend-mode: soft-light, screen, overlay, overlay,difference, overlay, normal;
+    }
+
+    .wrapper {
+        max-width: 340px;
+    }
+
+    .wrapper header {
+        font-size:21px !important;
+        white-space: nowrap;
+    }
+
+    form p {
+        font-size:14px !important;
+    }
+
+    .error_text {
+        font-size: 10px !important;
+    }
+    
+    .github_corner a {
+        color: #0C0252 !important;
+    }
+}

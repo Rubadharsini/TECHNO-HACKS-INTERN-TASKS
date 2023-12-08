@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./components/icon.ico" type="image/x-icon">
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <!-- Your Api Token -->
+    <script src="./token.js"></script>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Github -->
+        <div class="github_corner">
+           <a href="https://github.com/18jad" target="_blank"><i class="fab fa-github"></i></a> 
+        </div>
+        <header>
+            Currency Converter
+        </header>
+        <form action="#">
+            <div class="amount">
+                <p>Enter Amount</p>
+                <input type="number" class="input_style" min="1" max="20000000" name="currency" step="any" value="1" spellcheck="false" required>
+                <p id="error_txt" class="error_text"></p>
+            </div>
+            <div class="drop_list">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select_box">
+                        <img src="https://countryflagsapi.com/png/us" alt="US">
+                        <select name="from_currency">
+                        </select>
+                    </div>
+                </div>
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select_box">
+                        <img src="https://countryflagsapi.com/png/lb" alt="LB">
+                        <select name="from_currency">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange_rate">
+               <p class="exchange_result" id="exchange_result">Start Converting!</p> 
+            </div>
+            <button id="exchange" class="exchange_btn">Get Exchange Rate</button>
+        </form>
+    </div>
+    <script src="./js/country-list.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
